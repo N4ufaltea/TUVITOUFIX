@@ -1,829 +1,185 @@
-*   {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
-}
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-.layar-dalam {
-    width: 1000px;
-    margin: auto;
-}
-.layar-penuh {
-    width: 100%;
-}
-nav {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    border-bottom: 1px solid #b1b1b1;
-    line-height: 60px;
-    width: 100%;
-    transition: background-color 0.5s ease;
-}
-nav.putih {
-    background-color: #fff;
-}
-nav .logo {
-    float: left;
-    position: relative;
-    line-height: 55px;
-    text-align: center;
-}
-nav .logo img {
-    vertical-align: middle;
-    width: 120px;
-}
-nav .menu {
-    float: right;
-    height: 60px;
-    max-width: 600px;
-    z-index: 5;
-}
-nav .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    z-index: 5;
-}
-nav .menu ul li {
-    list-style-type: none;
-    float: left;
-    line-height: 60px;
-    z-index: 5;
-}
-nav ul li a {
-    color: #fff;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/*header*/
-header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-}
-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-header .judul img{
-width: 100%;
-height: 100%;
-z-index: 1;
-}
-header .intro {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 50%;
-}
-header .intro img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px
-}
-.btn-conteiner {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    --color-text: #ffffff;
-    --color-background: #ff135a;
-    --color-outline: #ff145b80;
-    --color-shadow: #00000080;
-  }
-  
-  .btn-content {
-    display: flex;
-    align-items: center;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    color: var(--color-text);
-    background: var(--color-background);
-    transition: 1s;
-    border-radius: 100px;
-    box-shadow: 0 0 0.2em 0 var(--color-background);
-  }
-  
-  .btn-content:hover, .btn-content:focus {
-    transition: 0.5s;
-    -webkit-animation: btn-content 1s;
-    animation: btn-content 1s;
-    outline: 0.1em solid transparent;
-    outline-offset: 0.2em;
-    box-shadow: 0 0 0.4em 0 var(--color-background);
-  }
-  
-  .btn-content .icon-arrow {
-    transition: 0.5s;
-    margin-right: 0px;
-    transform: scale(0.6);
-  }
-  
-  .btn-content:hover .icon-arrow {
-    transition: 0.5s;
-    margin-right: 25px;
-  }
-  
-  .icon-arrow {
-    width: 20px;
-    margin-left: 15px;
-    position: relative;
-    top: 6%;
-  }
-    
-  /* SVG */
-  #arrow-icon-one {
-    transition: 0.4s;
-    transform: translateX(-60%);
-  }
-  
-  #arrow-icon-two {
-    transition: 0.5s;
-    transform: translateX(-30%);
-  }
-  
-  .btn-content:hover #arrow-icon-three {
-    animation: color_anim 1s infinite 0.2s;
-  }
-  
-  .btn-content:hover #arrow-icon-one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
-  }
-  
-  .btn-content:hover #arrow-icon-two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
-  }
-  
-  /* SVG animations */
-  @keyframes color_anim {
-    0% {
-      fill: white;
-    }
-  
-    50% {
-      fill: var(--color-background);
-    }
-  
-    100% {
-      fill: white;
-    }
-  }
-  
-  /* Button animations */
-  @-webkit-keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-  }
-  
-  @keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-  }
-/*.tombol {
-    background-color: #c86b85;
-    height: 40px;
-    line-height: 42px;
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0px 20px 0px 20px;
-    font-size: 15px;
-    border-radius: 4px;
-}*/
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-   opacity: 10%;
-   z-index: -1;
-}
-.tombol-menu {
-    position: absolute;
-    top: 1.7rem;
-    right: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-}
-.tombol-menu .garis {
-    height: 3px;
-    background-color: #fff;
-}
-section{
-    padding: 50px 0px 50px 0px;
-}
-section h3{
-    font-size: 30px;
-}
-section h3::after{
-    content: "";
-    border-bottom: 5px solid #c86b85;
-    width: 52px;
-    display: block;
-    margin: 20px auto;
-}
-#aboutus, #team, #blog{
-    text-align: center;
-}
-section p.ringkasan{
-    font-style: italic;
-    font-size: 18px;
-    color: #ababab;
-}
-section .konten-isi p{
-    font-style: normal;
-}
-/*nav .putih{
-    background-color: #fff;
-}*/
-nav.putih .tombol-menu .garis{
-    background-color: #333;
-}
-nav.putih ul li a{
-    color: #333;
-}
-nav .logo img.hitam{
-    display: none;
-}
-section.abuabu{
-    background-color: #e8eaf1c2;
-}
-.support, .tim, .blog {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.support h6, .tim h6 {
-    margin: 0px;
-    margin-top: 20px;
-    padding: 0px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.support img {
-    width: 50px;
-}
-.support div, .tim div{
-    text-align: center;
-    width: 26%;
-}
-section#gallery{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-    padding: 10px 0px 10px 0px;
-}
-section#gallery div{
-    padding: 0;
-}
-section#gallery div img{
-    height: 100px;
-    border-radius: 5px;
-}
-section#gallery div img:hover{
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-}
-section.quote{
-    background:url("asset/background-bromo.jpg") ;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-style: italic;
-    padding: 100px;
-}
-section.quote .layar-dalam p{
-    display: inline;
-    background:url("asset/quote-icon.png") no-repeat;
-    padding: 40px;
-}
-.tim img{
-    width: 100%;
-    box-shadow: -10px #ccc;
-    border-radius: 5px;
-}
-.blog .area{
-    width: 47%;
-    box-shadow: 0px -10px 30px #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between ;
-}
-.blog div.area div{
-    width: 50%;
-}
-.blog .area .gambar{
-    border-radius: 5px 0px 0px 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-}
-.blog .area .text article{
-    padding: 40px;
-}
-.blog .area .text article h4{
-    margin: 0;
-}
-.blog .area .text article a{
-    color: #333;
-    text-decoration: none;
-    transition: color 0.5s ease;
-}
-.blog .area .text article a:hover{
-    color: #ccc;
-}
-footer{
-    padding: 50px 0px 50px 0px;
-    background-color: #343a40;
-    color: #fff;
-}
-footer .layar-dalam{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-footer .layar-dalam div{
-    width: 20%;
-}
-footer .layar-dalam h5{
-    margin-top: 0px;
-    font-size: 20px;
-    font-weight: bold;
-}
-footer .layar-dalam .copyright{
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #666;
-    text-align: center;
-}
-
-@media screen and (max-width: 991.98px) {
-    .layar-dalam {
-        width: 90%;
-    }
-    nav .menu ul {  
-        display: none;  
-        margin-top: 60px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;    
-    }
-    nav .menu ul li{
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-        line-height: 40px;
-    }
-    nav .menu ul li a{
-        color: #333;
-    }
-    .tombol-menu{
-        display: flex;
-    }
-    *   {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
-}
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-.layar-dalam {
-    width: 1000px;
-    margin: auto;
-}
-.layar-penuh {
-    width: 100%;
-}
-nav {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    border-bottom: 1px solid #b1b1b1;
-    line-height: 60px;
-    width: 100%;
-    transition: background-color 0.5s ease;
-}
-nav.putih {
-    background-color: #fff;
-}
-nav .logo {
-    float: left;
-    position: relative;
-    line-height: 55px;
-    text-align: center;
-}
-nav .logo img {
-    vertical-align: middle;
-    width: 120px;
-}
-nav .menu {
-    float: right;
-    height: 60px;
-    max-width: 600px;
-    z-index: 5;
-}
-nav .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    z-index: 5;
-}
-nav .menu ul li {
-    list-style-type: none;
-    float: left;
-    line-height: 60px;
-    z-index: 5;
-}
-nav ul li a {
-    color: #fff;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/*header*/
-header {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2;
-}
-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-header .judul img{
-width: 100%;
-height: 100%;
-z-index: 1;
-}
-header .intro {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 50%;
-}
-header .intro img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px
-}
-.btn-conteiner {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    --color-text: #ffffff;
-    --color-background: #ff135a;
-    --color-outline: #ff145b80;
-    --color-shadow: #00000080;
-  }
-  
-  .btn-content {
-    display: flex;
-    align-items: center;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    color: var(--color-text);
-    background: var(--color-background);
-    transition: 1s;
-    border-radius: 100px;
-    box-shadow: 0 0 0.2em 0 var(--color-background);
-  }
-  
-  .btn-content:hover, .btn-content:focus {
-    transition: 0.5s;
-    -webkit-animation: btn-content 1s;
-    animation: btn-content 1s;
-    outline: 0.1em solid transparent;
-    outline-offset: 0.2em;
-    box-shadow: 0 0 0.4em 0 var(--color-background);
-  }
-  
-  .btn-content .icon-arrow {
-    transition: 0.5s;
-    margin-right: 0px;
-    transform: scale(0.6);
-  }
-  
-  .btn-content:hover .icon-arrow {
-    transition: 0.5s;
-    margin-right: 25px;
-  }
-  
-  .icon-arrow {
-    width: 20px;
-    margin-left: 15px;
-    position: relative;
-    top: 6%;
-  }
-    
-  /* SVG */
-  #arrow-icon-one {
-    transition: 0.4s;
-    transform: translateX(-60%);
-  }
-  
-  #arrow-icon-two {
-    transition: 0.5s;
-    transform: translateX(-30%);
-  }
-  
-  .btn-content:hover #arrow-icon-three {
-    animation: color_anim 1s infinite 0.2s;
-  }
-  
-  .btn-content:hover #arrow-icon-one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
-  }
-  
-  .btn-content:hover #arrow-icon-two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
-  }
-  
-  /* SVG animations */
-  @keyframes color_anim {
-    0% {
-      fill: white;
-    }
-  
-    50% {
-      fill: var(--color-background);
-    }
-  
-    100% {
-      fill: white;
-    }
-  }
-  
-  /* Button animations */
-  @-webkit-keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-  }
-  
-  @keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-  }
-/*.tombol {
-    background-color: #c86b85;
-    height: 40px;
-    line-height: 42px;
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0px 20px 0px 20px;
-    font-size: 15px;
-    border-radius: 4px;
-}*/
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-   opacity: 10%;
-   z-index: -1;
-}
-.tombol-menu {
-    position: absolute;
-    top: 1.7rem;
-    right: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-}
-.tombol-menu .garis {
-    height: 3px;
-    background-color: #fff;
-}
-section{
-    padding: 50px 0px 50px 0px;
-}
-section h3{
-    font-size: 30px;
-}
-section h3::after{
-    content: "";
-    border-bottom: 5px solid #c86b85;
-    width: 52px;
-    display: block;
-    margin: 20px auto;
-}
-#aboutus, #team, #blog{
-    text-align: center;
-}
-section p.ringkasan{
-    font-style: italic;
-    font-size: 18px;
-    color: #ababab;
-}
-section .konten-isi p{
-    font-style: normal;
-}
-/*nav .putih{
-    background-color: #fff;
-}*/
-nav.putih .tombol-menu .garis{
-    background-color: #333;
-}
-nav.putih ul li a{
-    color: #333;
-}
-nav .logo img.hitam{
-    display: none;
-}
-section.abuabu{
-    background-color: #e8eaf1c2;
-}
-.support, .tim, .blog {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.support h6, .tim h6 {
-    margin: 0px;
-    margin-top: 20px;
-    padding: 0px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.support img {
-    width: 50px;
-}
-.support div, .tim div{
-    text-align: center;
-    width: 26%;
-}
-section#gallery{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-    padding: 10px 0px 10px 0px;
-}
-section#gallery div{
-    padding: 0;
-}
-section#gallery div img{
-    height: 100px;
-    border-radius: 5px;
-}
-section#gallery div img:hover{
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-}
-section.quote{
-    background:url("asset/background-bromo.jpg") ;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-style: italic;
-    padding: 100px;
-}
-section.quote .layar-dalam p{
-    display: inline;
-    background:url("asset/quote-icon.png") no-repeat;
-    padding: 40px;
-}
-.tim img{
-    width: 100%;
-    box-shadow: -10px #ccc;
-    border-radius: 5px;
-}
-.blog .area{
-    width: 47%;
-    box-shadow: 0px -10px 30px #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between ;
-}
-.blog div.area div{
-    width: 50%;
-}
-.blog .area .gambar{
-    border-radius: 5px 0px 0px 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-}
-.blog .area .text article{
-    padding: 40px;
-}
-.blog .area .text article h4{
-    margin: 0;
-}
-.blog .area .text article a{
-    color: #333;
-    text-decoration: none;
-    transition: color 0.5s ease;
-}
-.blog .area .text article a:hover{
-    color: #ccc;
-}
-footer{
-    padding: 50px 0px 50px 0px;
-    background-color: #343a40;
-    color: #fff;
-}
-footer .layar-dalam{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-footer .layar-dalam div{
-    width: 20%;
-}
-footer .layar-dalam h5{
-    margin-top: 0px;
-    font-size: 20px;
-    font-weight: bold;
-}
-footer .layar-dalam .copyright{
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #666;
-    text-align: center;
-}
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuban City Virtual Tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="layar-dalam">
+            <div class="logo">
+                <a href=""><img src="asset/logo-smartcity-pemkab-removebg-preview.png" class="putih"/></a>
+                <a href=""><img src="asset/logo-smartcity-pemkab-removebg-preview.png" class="hitam"/></a>
+            </div>
+            <div class="menu">
+                <a href="#" class="tombol-menu">
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                </a> 
+            <ul>
+                <li> <a href="#home">Home</a></li>
+                <li> <a href="#aboutus">About Us</a></li>
+                <li> <a href="#support">Support</a></li>
+                <li> <a href="#gallery">Gallery</a></li>
+                <li> <a href="#team">Team</a></li>
+                <li> <a href="#blog">Blog</a></li>
+                <li> <a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav> 
+    <div class="layar-penuh">
+        <header id="home">
+            <div class="overlay"></div>
+            <img src="asset/TVTBG.PNG" alt="">
+            <div class="judul">
+                <img src="asset/TVTFONT.PNG" alt="">
+            </div>
+            <div class="intro">
+            
+               <div class="btn-conteiner">
+                <a class="btn-content" href="Masuk/imageslider.html">
+                  <span class="btn-title">MASUK</span>
+                  <span class="icon-arrow">
+                    <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path id="arrow-icon-one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path id="arrow-icon-two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path id="arrow-icon-three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                      </g>
+                    </svg>
+                  </span> 
+                </a>
+              </div>
+            </div>
+        </header>
+        <main>
+            <section id="aboutus">
+                <div class="layar-dalam">
+                    <h3>About Us</h3>
+                    <p class="ringkasan">Situs yang membawa pengalaman interaktif, edukatif, dan rekreatif mengenai wisata Tuban.
+                    </p>
+                    <div class="konten-isi">
+                        <p>Dengan mengedepankan teknologi sebagai pilar utama, tim kami berusaha menciptakan platform wisata virtual yang tidak hanya menarik tetapi juga informatif. Kami bangga dapat menghadirkan rekreasi digital yang menghubungkan pengunjung dengan sejarah dan budaya Tuban melalui inovasi yang berkelanjutan.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="abuabu" id="support">
+                <div class="layar-dalam support">
+                    <div>
+                        <img src="asset/matahari.png"/>
+                        <h6>Tovitou</h6>
+                        <p>TUVITOU merupakan akronim dari <i>Tuban Virtual Tour</i>. Dengan harapan menyediakan pengalaman baru dan moder mengenai wisata Tuban, sesuai dengan perkembangan zaman dan teknologi  </p>
+                    </div>
+                    <div>
+                        <img src="asset/tas.png"/>
+                        <h6>Nama Team</h6>
+                        <p>ADANZA merupakan nama tim dengan akronim dari masing masing founder kami, yaitu Aad, Zaidan, dan Zaenuri.</p>
+                    </div>
+                    <div>
+                        <img src="asset/kompas.png"/>
+                        <h6>Sosial Media</h6>
+                        <p>Coming Soon!</p>
+                    </div>
+                </div>
+            </section>
+            <section id="gallery">
+                <div><img src="asset/Air Terjun Nglirip, Tuban.jpeg"/></div>
+                <div><img src="asset/Jembatan babat Widang.jpeg"/></div>
+                <div><img src="asset/Klenteng Kwan Sing Bio, Tuban, Jawa Timur.jpeg"/></div>
+                <div><img src="asset/Sunanbonang.jpeg"/></div>
+                <div><img src="asset/Masjid-masjid Indah di Indonesia.jpeg"/></div>
+                <div><img src="asset/Pantai Banyu Tibo yang Tersembunyi di Pacitan Jawa Timur  - Jawa Timur.jpeg"/></div>
+                <div><img src="asset/boom.jpeg"/></div>
+                <div><img src="asset/Pantai Kelapa Tuban, Pantai Pasir Putih dengan Rimbunan Pepohonan Kelapa Memukau.jpeg"/></div>
+            </section>
+            <section class="quote">
+                <div class="layar-dalam">
+                    <p>Tuban lahir ketika Tuhan sedang tersenyum.</p>
+                </div>
+            </section>
+            <section id="team">
+                <div class="layar-dalam">
+                    <h3>Our Team</h3>
+                    <p class="ringkasan">Tiga siswa SMA dengan semangat yang tinggi dalam mengeksplorasi teknologi, rekreasi, dan inovasi.</p>
+                    <div class="tim">
+                        <div>
+                            <img src="asset/Aad.jpg"/>
+                        <h6>Muhammad Adzin Naufal Agustiyono</h6>
+                        <span>Website Programmer</span>
+                    </div>
+                        <div>
+                            <img src="asset/Zai.jpg"/>
+                        <h6>Ahmad Zaidaan Ramadhan</h6>
+                        <span>Pembuat Virtual Tour</span>
+                    </div>
+                        <div>
+                            <img src="asset/Fash.jpg"/>
+                        <h6>Ahmad Zaenuri Fasha</h6>
+                        <span>Pemotret 360 Panoramic View</span>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section class="abuabu" id="blog">
+                <div class="layar-dalam">
+                    <h3>Lastest Blog</h3>
+                    <p class="ringkasan">Berita terbaru mengenai wisata Tuban</p>
+                <div class="blog">
+                    <div class="area">
+                        <div class="gambar" style="background-image:url('asset/alun.jpg');"></div>
+                        <div class="text">
+                            <article>
+                                <h4><a href="#">Renovasi Alun-alun Tuban</a></h4>
+                                <p>Penasaran mengenai perubahan Alun-alun terbaru? Begini designnya!</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="area">
+                        <div class="gambar" style="background-image:url('asset/trip\ bromo.jpg');"></div>
+                        <div class="text">
+                            <article>
+                                <h4><a href="#">10 wisata Tuban yang cocok untuk kamu saat bingung berlibur!</a></h4>
+                                <p>Liburan di 10 tempat wisata yang ga kalah keren di Kabupaten Tuban</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+        <footer id="contact">
+            <div class="layar-dalam">
+                <div>
+                    <h5>Info</h5>
+                    Coming Soon!
+                </div>
+                <div>
+                    <h5>Contact</h5>
+                    Coming Soon!
+                </div>
+                <div>
+                    <h5>Help</h5>
+                    Coming Soon!
+                </div>
+                <div>
+                    <h5>Sitemap</h5>
+                    Coming Soon!
+                </div>
+            </div>
+            <div class="layar-dalam">
+                <div class="copyright">
+                    &copy; 2024 TOVITOU Tuban Virtual Tour
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
