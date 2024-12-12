@@ -404,6 +404,20 @@ footer .layar-dalam .copyright{
     .layar-dalam {
         width: 90%;
     }
+    header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -2;
+}
+header .judul img{
+width: 80%;
+height: 80;
+z-index: 1;
+}
     nav .menu ul {  
         display: none;  
         margin-top: 60px;
@@ -424,76 +438,21 @@ footer .layar-dalam .copyright{
     .tombol-menu{
         display: flex;
     }
-    *   {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
-}
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-.layar-dalam {
-    width: 1000px;
-    margin: auto;
-}
-.layar-penuh {
-    width: 100%;
-}
-nav {
-    z-index: 100;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    border-bottom: 1px solid #b1b1b1;
-    line-height: 60px;
-    width: 100%;
-    transition: background-color 0.5s ease;
-}
-nav.putih {
-    background-color: #fff;
-}
-nav .logo {
-    float: left;
-    position: relative;
-    line-height: 55px;
-    text-align: center;
-}
-nav .logo img {
-    vertical-align: middle;
-    width: 120px;
-}
-nav .menu {
-    float: right;
-    height: 60px;
-    max-width: 600px;
-    z-index: 5;
-}
-nav .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    z-index: 5;
-}
-nav .menu ul li {
-    list-style-type: none;
-    float: left;
-    line-height: 60px;
-    z-index: 5;
-}
-nav ul li a {
-    color: #fff;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
+    .blog .area{
+        display: block;
+    }
+    .blog div.area div{
+        width: 100%;
+    }
+    .blog .area .gambar{
+        border-radius: 5px 5px 0px 0px;
+        height: 200px;
+    }
+    .support{
+        display: block;
+    }
+    .support div{
+        width: 100%;
+        padding-bottom: 30px;
+    }
 }
